@@ -31,9 +31,10 @@ class SpaceShip {
             return false
         }
         let speedMin = checkSpeedRequirement(for: planet)
-        if self.speed == speedMin {
-            return true
+        if self.speed.rawValue >= speedMin.rawValue {
+            
             currentPlanet = planet
+            return true
         } else {
             return false
         }
@@ -42,21 +43,21 @@ class SpaceShip {
     func checkSpeedRequirement (for planet:Planet) -> Speed {
         switch planet {
         case .venus:
-            speed = .fast
+             return .fast
         case .earth:
-            speed = .fast
+            return .fast
         case .mars:
-            speed = .lightSpeed
+            return .lightSpeed
         case .jupiter:
-            speed = .slow
+            return .slow
         case .saturn:
-            speed = .medium
+            return .medium
         case .uranus:
-            speed = .slow
+            return .slow
         case .neptune:
-            speed = .fast
+            return .fast
         default:
-            speed = .none
+            return .none
         }
     }
     

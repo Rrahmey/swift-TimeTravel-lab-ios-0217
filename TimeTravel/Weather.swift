@@ -22,6 +22,7 @@ enum Planet: Int {
         } else {
             return false
         }
+    }
     
         var weather: Weather {
             switch self {
@@ -41,8 +42,8 @@ enum Planet: Int {
                 return .cold
             case .neptune:
                 return .cold
-        
+                
             }
         }
-    
+        
 }

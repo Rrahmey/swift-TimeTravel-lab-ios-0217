@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TimeTravel" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +20,178 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome to :" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GRd-wA-Sm3">
+                                <rect key="frame" x="64" y="28" width="246" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Zu-UV-ONl">
+                                <rect key="frame" x="87" y="67" width="187" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VZI-ft-eUL">
+                                <rect key="frame" x="52" y="167" width="37" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="None"/>
+                                <connections>
+                                    <action selector="speedIsNon:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pz8-qC-RKj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="afx-IG-kJa">
+                                <rect key="frame" x="164" y="167" width="33" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Slow"/>
+                                <connections>
+                                    <action selector="speedIsSlow:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0t1-J8-fI9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mUY-o9-VCU">
+                                <rect key="frame" x="270" y="167" width="55" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Medium"/>
+                                <connections>
+                                    <action selector="speedIsMedium:" destination="BYZ-38-t0r" eventType="touchUpInside" id="b70-BF-gPC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dwA-EG-VAh">
+                                <rect key="frame" x="101" y="205" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Fast"/>
+                                <connections>
+                                    <action selector="speedIsFast:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gei-op-D87"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yrt-9E-ePV">
+                                <rect key="frame" x="208" y="205" width="73" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Lightening"/>
+                                <connections>
+                                    <action selector="speedIsLightening:" destination="BYZ-38-t0r" eventType="touchUpInside" id="thY-He-b9N"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Choose a speed to travel at:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bbf-Av-qpF">
+                                <rect key="frame" x="56" y="119" width="263" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Where do you want to go?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aaH-9n-9Y9">
+                                <rect key="frame" x="87" y="294" width="200" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QuK-3g-xha">
+                                <rect key="frame" x="47" y="352" width="57" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Mercury"/>
+                                <connections>
+                                    <action selector="planetMercuryButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qnL-aI-5zS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sBu-01-mt6">
+                                <rect key="frame" x="153" y="352" width="43" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Venus"/>
+                                <connections>
+                                    <action selector="planetVenusButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QEg-gJ-hTS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ip-Uy-hNJ">
+                                <rect key="frame" x="269" y="352" width="37" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Earth"/>
+                                <connections>
+                                    <action selector="planetEarthButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FN4-ZE-udK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Kt-he-V5m">
+                                <rect key="frame" x="58" y="399" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Mars"/>
+                                <connections>
+                                    <action selector="planetMarsButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yWJ-ce-h0d"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N6j-KK-x54">
+                                <rect key="frame" x="156" y="399" width="48" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Jupiter"/>
+                                <connections>
+                                    <action selector="planetJupiterButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eCG-pp-CGj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vg4-rV-Ymh">
+                                <rect key="frame" x="264" y="399" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Saturn"/>
+                                <connections>
+                                    <action selector="planetSaturnButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xJr-7q-pKr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ljn-oa-36z">
+                                <rect key="frame" x="99" y="457" width="50" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Uranus"/>
+                                <connections>
+                                    <action selector="planetUranusButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hnf-u9-W7k"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vPD-V3-Cy6">
+                                <rect key="frame" x="215" y="457" width="59" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Neptune"/>
+                                <connections>
+                                    <action selector="planetNeptuneButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3tt-7D-7PT"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i9a-7V-Utt">
+                                <rect key="frame" x="56" y="534" width="250" height="97"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.47634192232011352" green="0.81892076443619499" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="currentPlanetLabel" destination="7Zu-UV-ONl" id="Plq-ID-7dF"/>
+                        <outlet property="fastSpeedButton" destination="dwA-EG-VAh" id="2oV-4E-X79"/>
+                        <outlet property="lighteningSpeedButton" destination="Yrt-9E-ePV" id="JJ6-ch-rhA"/>
+                        <outlet property="mediumSpeedButton" destination="mUY-o9-VCU" id="8dj-xX-0rF"/>
+                        <outlet property="noSpeedButton" destination="VZI-ft-eUL" id="EwH-fg-n9r"/>
+                        <outlet property="planetEarth" destination="6Ip-Uy-hNJ" id="aXS-iV-XjI"/>
+                        <outlet property="planetJupiter" destination="N6j-KK-x54" id="7hn-r8-rfb"/>
+                        <outlet property="planetMars" destination="1Kt-he-V5m" id="KFL-ud-T18"/>
+                        <outlet property="planetMercury" destination="QuK-3g-xha" id="obZ-L5-YRh"/>
+                        <outlet property="planetNeptune" destination="vPD-V3-Cy6" id="l3U-9E-lSM"/>
+                        <outlet property="planetSaturn" destination="vg4-rV-Ymh" id="sBN-z2-LoW"/>
+                        <outlet property="planetUranus" destination="ljn-oa-36z" id="OJI-2U-8MB"/>
+                        <outlet property="planetVenus" destination="sBu-01-mt6" id="R0F-1w-hKN"/>
+                        <outlet property="resultLabel" destination="i9a-7V-Utt" id="BMD-Ha-I4f"/>
+                        <outlet property="speedSlowButton" destination="afx-IG-kJa" id="DW9-Sz-k9u"/>
+                        <outletCollection property="allPlanets" destination="1Kt-he-V5m" collectionClass="NSMutableArray" id="OPV-LP-gSm"/>
+                        <outletCollection property="allPlanets" destination="QuK-3g-xha" collectionClass="NSMutableArray" id="Q62-KF-M73"/>
+                        <outletCollection property="allPlanets" destination="sBu-01-mt6" collectionClass="NSMutableArray" id="Y66-3r-MNS"/>
+                        <outletCollection property="allPlanets" destination="6Ip-Uy-hNJ" collectionClass="NSMutableArray" id="RXG-cP-Msm"/>
+                        <outletCollection property="allPlanets" destination="N6j-KK-x54" collectionClass="NSMutableArray" id="fUA-8X-bg7"/>
+                        <outletCollection property="allPlanets" destination="vg4-rV-Ymh" collectionClass="NSMutableArray" id="Bqo-Ap-SEx"/>
+                        <outletCollection property="allPlanets" destination="ljn-oa-36z" collectionClass="NSMutableArray" id="CvW-Jx-O7I"/>
+                        <outletCollection property="allPlanets" destination="vPD-V3-Cy6" collectionClass="NSMutableArray" id="n8M-KF-csz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>
     </scenes>
 </document>
